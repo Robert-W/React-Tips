@@ -1,0 +1,40 @@
+doctype
+html
+  head
+    title #{title}
+    meta(name='viewport', id='viewport', content='width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1')
+    meta(http-equiv='X-UA-Compatible', content='IE=Edge')
+    meta(name='author', content='#{author}')
+    meta(charset='utf-8')
+
+    style
+      :stylus
+        @require 'css/critical'
+    link(rel='stylesheet', href='css/app.css')
+    link(rel='stylesheet', href='vendor/prism/themes/prism.css')
+    script.
+      var base = location.href.replace(/\/[^/]+$/, '');
+      var dojoConfig = {
+        parseOnLoad: false,
+        async: true,
+        cacheBust: '#{version}',
+        packages: [
+          { name: 'js', location: base + '/js' },
+          { name: 'vendor', location: base + '/vendor' },
+          { name: 'utils', location: base + '/js/utils' },
+          { name: 'stores', location: base + '/js/stores' },
+          { name: 'actions', location: base + '/js/actions' },
+          { name: 'components', location: base + '/js/components' }
+        ],
+        aliases: [
+          ['alt', 'vendor/alt/dist/alt.min'],
+          ['react', 'vendor/react/react.min'],
+          ['react-dom', 'vendor/react/react-dom.min']
+        ],
+        deps: ['dojo/domReady!'],
+        callback: function () {require(['js/main']);}
+      };
+  body
+    #root
+    script(src='vendor/prism/prism.js')
+    script(src='http://js.arcgis.com/#{esriVersion}/init.js', async)
