@@ -10,6 +10,7 @@ This is an example app to demonstrate and explain some concepts, tips, preferred
 5. Dispatcher Example/Tips
 6. Actions Example/Tips
 7. Stores Example/Tips
+8. Add build script for CI to generate code for gh-pages
 8. Circle CI to automate deployment to gh-pages
 9. Add eslint
 
