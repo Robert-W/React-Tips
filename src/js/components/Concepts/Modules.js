@@ -20,9 +20,8 @@ export const add function () {}
 export const multiply function () {}\
         `}</code></pre>
       <div className='modules__header'>Default exports:</div>
-        <p>
-          You can only have one default export per module. There are a couple of common patterns for default exports.
-          <pre className='language-javascript'><code>{`\
+        <p>You can only have one default export per module. There are a couple of common patterns for default exports.</p>
+        <pre className='language-javascript'><code>{`\
 // For exporting a default class
 export default class MyComponent extends React.Component { ... }
 // Exporting a declared constant as default
@@ -31,34 +30,35 @@ export { myFunction as default };
 // Exporting anonymous functions or objects as default
 export default {}
 export default function () {}\
-          `}</code></pre>
-        Technically you can have a default export and a named export in the same module, but I am not sure there
-        are many cases for doing that.
+        `}</code></pre>
+        <p>
+          Technically you can have a default export and a named export in the same module, but I am not sure there
+          are many cases for doing that.
         </p>
       <div className='modules__header'>Import modules exported as default:</div>
       <p>
         This is the preferred pattern in my opinion.  Each module can only have one default export.
         Importing default modules can be done like so:
-        <pre className='language-javascript'><code>{`\
-import App from 'components/App';\
-        `}</code></pre>
       </p>
+      <pre className='language-javascript'><code>{`\
+import App from 'components/App';\
+      `}</code></pre>
       <div className='modules__header'>Import modules with many exports:</div>
       <p>
         Modules with many exports export an object with your named exports as properties of the object.
         So if you export functions foo, bar, and baz, your import may return an object like this.
-        <pre className='language-javascript'><code>{`\
+      </p>
+      <pre className='language-javascript'><code>{`\
 {
   foo: function () {},
   bar: function () {},
   vaz: function () {}
 }\
-        `}</code></pre>
-        Which can be imported as follows:
-        <pre className='language-javascript'><code>{`\
+      `}</code></pre>
+      <p>Which can be imported as follows:</p>
+      <pre className='language-javascript'><code>{`\
 import {foo, bar, baz} from 'lib/myModule';\
-        `}</code></pre>
-      </p>
+      `}</code></pre>
       <div className='modules__header'>Import modules with as:</div>
       <pre className='language-javascript'><code>{`\
 import {superLongFunctionName as func} from 'lib/components/SuperLongModuleName';

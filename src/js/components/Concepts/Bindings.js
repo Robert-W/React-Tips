@@ -87,18 +87,18 @@ export default class Button extends React.Component {
   //- Map Functions
   renderOdds (item) {
     //- return null for evens
-    if (item % 2 === 0) { return; }
+    if (item % 2 === 0) { return null; }
     return this.renderItem(item);
   }
 
   renderEvens (item) {
     //- return null for odds
-    if (item % 2 !== 0) { return; }
+    if (item % 2 !== 0) { return null; }
     return this.renderItem(item);
   }
 
   renderItem (item) {
-    return <span>{item}</span>
+    return <span>{item}</span>;
   }
 
 }

@@ -8,7 +8,8 @@ const Container = (props) => {
         functionality.  They can render any children passed into them using the reserved prop name of children.
         This is good for Modals or sections like the ones used in this demo app. Below is a sample
         implementation of a container component. Also, see the Section component in source.
-        <pre className='language-javascript'><code>{`\
+      </p>
+      <pre className='language-javascript'><code>{`\
 //- Container Component
 const Modal = (props) => {
   return (
@@ -29,8 +30,7 @@ export default class ShareModal extends React.Component {
     );
   }
 }\
-        `}</code></pre>
-      </p>
+      `}</code></pre>
       <p>
         Controller components are components that behave as controller views.  They are often top level
         components that retrieve data from the stores, and pass them down into the children components. They

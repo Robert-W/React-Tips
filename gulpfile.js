@@ -1,3 +1,4 @@
+var autoprefixer = require('gulp-autoprefixer');
 var packageJson = require('./package.json');
 var browserSync = require('browser-sync');
 var stylus = require('gulp-stylus');
@@ -40,6 +41,7 @@ gulp.task('jade', function () {
 gulp.task('stylus', function () {
   return gulp.src(config.stylus.src)
     .pipe(stylus({ linenos: true }))
+    .pipe(autoprefixer())
     .pipe(gulp.dest(config.stylus.dest));
 });
 

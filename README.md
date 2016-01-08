@@ -6,16 +6,16 @@ This example app attempts to demonstrate and explain concepts, tips, preferred s
 Coming Soon to gh-pages.
 
 ### Still under development - Items to complete
-1. [] Pure Components Example/Tips
-2. [] Prerender Example
-3. [] Immutable.js Link/Tips
-4. [] Alt.js Tips
-5. [] Dispatcher Example/Tips
-6. [] Actions Example/Tips
-7. [] Stores Example/Tips
-8. [] Add build script for CI to generate code for gh-pages
-8. [] Circle CI to automate deployment to gh-pages
-9. [] Add eslint
+1. [ ] Pure Components Example/Tips
+2. [x] Prerender Example
+3. [ ] Immutable.js Link/Tips
+4. [ ] Alt.js Tips
+5. [ ] Dispatcher Example/Tips
+6. [ ] Actions Example/Tips
+7. [ ] Stores Example/Tips
+8. [ ] Add build script for CI to generate code for gh-pages
+8. [ ] Circle CI to automate deployment to gh-pages
+9. [x] Add eslint
 
 ### Purpose
 This was developed for a BlueRaster Brownbag/Training to demonstrate tips and tricks learned for other developers.

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Prerender = (props) => {
+const Prerender = () => {
   return (
     <p>
       This is ideal for any application that is generating the UI with JavaScript. Dont load a blank page,
@@ -14,6 +14,6 @@ const Prerender = (props) => {
       </a>
     </p>
   );
-}
+};
 
 export { Prerender as default };

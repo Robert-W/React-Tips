@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Order = (props) => {
+const Order = () => {
   return (
     <div className='method-order'>
       <p className='method-order__description'>

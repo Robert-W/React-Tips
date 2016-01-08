@@ -17,7 +17,7 @@ const lifeCycleMethods = [
 const itemMapper = (item) => <li className='lifecycle-methods__list-item'><code className='language-javascript'>{item}</code></li>;
 
 //- Component
-const LifeCycle = (props) => {
+const LifeCycle = () => {
   return (
     <div className='lifecycle'>
       <p className='lifecycle-methods__description'>
@@ -33,6 +33,6 @@ const LifeCycle = (props) => {
       </ul>
     </div>
   );
-}
+};
 
 export { LifeCycle as default };

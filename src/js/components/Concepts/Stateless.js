@@ -1,10 +1,12 @@
 import React from 'react';
 
-const Stateless = (props) => {
+const Stateless = () => {
   return (
-    <p>
-      Stateless functions are ideal.  They only render props and sometimes trigger actions.
-      These are the most reusable components and even have a special shorthand syntax.
+    <div>
+      <p>
+        Stateless functions are ideal.  They only render props and sometimes trigger actions.
+        These are the most reusable components and even have a special shorthand syntax.
+      </p>
       <pre className='language-javascript'><code>{`\
 let MyComponent = (props) => {
   return (
@@ -14,7 +16,7 @@ let MyComponent = (props) => {
   );
 };\
       `}</code></pre>
-    </p>
+  </div>
   );
 };
 
