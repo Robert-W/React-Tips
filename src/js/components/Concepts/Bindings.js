@@ -58,6 +58,7 @@ export default class Button extends React.Component {
           <button onClick={this.goodBindAttrs} data-value='Im a button' >Good, No Arguments, has attributes</button>
         </div>
         <div className='bindings__conditional-map'>
+          <p>View source code to see an alternative method to passing parameters into a function inside [].map()</p>
           <div>
             <h5>Evens</h5>
             {list.map(this.renderEvens)}

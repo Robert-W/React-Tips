@@ -1,18 +1,21 @@
 # React Tips
 
-This example app attempts to demonstrate and explain concepts, tips, preferred styles, and lessons learned while I've been using React. While this could have been written in markdown, I wanted to provide samples as well as snippets and explanations. All of the concepts discussed have samples in the source code or links to external examples.
+This example app attempts to demonstrate and explain concepts, tips, preferred styles, and lessons learned while I've been using React. While this could have been written in markdown (and would have been much easier to maintain), I wanted to provide samples as well as snippets and explanations. All of the concepts discussed have samples in the source code or links to external examples. You can read all about the tips, tricks, concepts, etc. at the demo link.
+
+## Demo
+Coming Soon to gh-pages.
 
 ### Still under development - Items to complete
-1. Pure Components Example/Tips
-2. Prerender Example
-3. Immutable.js Link/Tips
-4. Alt.js Tips
-5. Dispatcher Example/Tips
-6. Actions Example/Tips
-7. Stores Example/Tips
-8. Add build script for CI to generate code for gh-pages
-8. Circle CI to automate deployment to gh-pages
-9. Add eslint
+1. [] Pure Components Example/Tips
+2. [] Prerender Example
+3. [] Immutable.js Link/Tips
+4. [] Alt.js Tips
+5. [] Dispatcher Example/Tips
+6. [] Actions Example/Tips
+7. [] Stores Example/Tips
+8. [] Add build script for CI to generate code for gh-pages
+8. [] Circle CI to automate deployment to gh-pages
+9. [] Add eslint
 
 ### Purpose
 This was developed for a BlueRaster Brownbag/Training to demonstrate tips and tricks learned for other developers.
@@ -22,9 +25,6 @@ This was developed for a BlueRaster Brownbag/Training to demonstrate tips and tr
 1. ```npm install```
 2. ```npm start```
 3. Visit [http://localhost:3000/](http://localhost:3000/)
-
-### Demo
-Coming Soon to gh-pages.
 
 #### Resources
 1. [React](https://facebook.github.io/react/)

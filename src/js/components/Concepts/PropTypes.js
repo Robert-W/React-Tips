@@ -1,6 +1,6 @@
 import React from 'react';
 
-let PropTypes = (props) => {
+const PropTypes = (props) => {
   return (
     <div>
       <p>

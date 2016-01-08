@@ -9,11 +9,32 @@ import React from 'react';
 const Modules = (props) => {
   return (
     <div>
-      <p>There are a few different patterns for imports and exports which are outlined below.</p>
+      <p>
+        There are a few different patterns for imports and exports which are outlined below. Since most
+        of our development with React will be in ES6, it would be a good idea to understand all these patterns.
+      </p>
       <div className='modules__header'>Exports:</div>
-
+        <pre className='language-javascript'><code>{`\
+export const config = {}
+export const add function () {}
+export const multiply function () {}\
+        `}</code></pre>
       <div className='modules__header'>Default exports:</div>
-
+        <p>
+          You can only have one default export per module. There are a couple of common patterns for default exports.
+          <pre className='language-javascript'><code>{`\
+// For exporting a default class
+export default class MyComponent extends React.Component { ... }
+// Exporting a declared constant as default
+const myFunction function () {} // or const config = {}
+export { myFunction as default };
+// Exporting anonymous functions or objects as default
+export default {}
+export default function () {}\
+          `}</code></pre>
+        Technically you can have a default export and a named export in the same module, but I am not sure there
+        are many cases for doing that.
+        </p>
       <div className='modules__header'>Import modules exported as default:</div>
       <p>
         This is the preferred pattern in my opinion.  Each module can only have one default export.

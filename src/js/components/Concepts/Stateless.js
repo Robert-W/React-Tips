@@ -1,6 +1,6 @@
 import React from 'react';
 
-let Stateless = (props) => {
+const Stateless = (props) => {
   return (
     <p>
       Stateless functions are ideal.  They only render props and sometimes trigger actions.
