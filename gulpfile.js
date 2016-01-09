@@ -20,12 +20,20 @@ var config = {
   jade: {
     src: 'src/**/*.jade',
     watch: ['src/**/*.jade', 'src/css/critical.styl'],
-    dest: 'build'
+    dest: 'build',
+    dist: 'dist'
   },
   stylus: {
     src: ['src/css/app.styl', 'src/css/critical.styl'],
     watch: 'src/css/**/*.styl',
-    dest: 'build/css/'
+    dest: 'build/css/',
+    dist: 'dist/css/'
+  },
+  copy: {
+    react: { src: 'build/vendor/react/react.min.js', dest: 'dist/vendor/react/'},
+    reactDOM: { src: 'build/vendor/react/react-dom.min.js', dest: 'dist/vendor/react/'},
+    prism: { src: 'build/vendor/prism/prism.js', dest: 'dist/vendor/prism/'},
+    prismCSS: { src: 'build/vendor/prism/themes/prism.css', dest: 'dist/vendor/prism/themes/'}
   }
 };
 
@@ -45,6 +53,30 @@ gulp.task('stylus', function () {
     .pipe(gulp.dest(config.stylus.dest));
 });
 
+gulp.task('jade-dist', function () {
+  return gulp.src(config.jade.src)
+    .pipe(jade({ locals: locals }))
+    .pipe(gulp.dest(config.jade.dist));
+});
+
+gulp.task('stylus-dist', function () {
+  return gulp.src(config.stylus.src)
+    .pipe(stylus({ linenos: true }))
+    .pipe(autoprefixer())
+    .pipe(gulp.dest(config.stylus.dist));
+});
+
+gulp.task('copy-dist', function () {
+  gulp.src(config.copy.react.src)
+    .pipe(gulp.dest(config.copy.react.dest));
+  gulp.src(config.copy.reactDOM.src)
+    .pipe(gulp.dest(config.copy.reactDOM.dest));
+  gulp.src(config.copy.prism.src)
+    .pipe(gulp.dest(config.copy.prism.dest));
+  gulp.src(config.copy.prismCSS.src)
+    .pipe(gulp.dest(config.copy.prismCSS.dest));
+});
+
 gulp.task('watch', function () {
   gulp.watch(config.jade.watch, ['jade']);
   gulp.watch(config.stylus.watch, ['stylus']);
@@ -52,3 +84,4 @@ gulp.task('watch', function () {
 
 gulp.task('build', ['watch', 'jade', 'stylus']);
 gulp.task('serve', function () { browserSync(config.server); });
+gulp.task('dist', ['jade-dist', 'stylus-dist', 'copy-dist']);

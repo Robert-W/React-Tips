@@ -1,24 +1,20 @@
 # React Tips
 
-This example app attempts to demonstrate and explain concepts, tips, preferred styles, and lessons learned while I've been using React. While this could have been written in markdown (and would have been much easier to maintain), I wanted to provide samples as well as snippets and explanations. All of the concepts discussed have samples in the source code or links to external examples. You can read all about the tips, tricks, concepts, etc. at the demo link.
+This example app attempts to demonstrate and explain concepts, tips, preferred styles, and lessons learned from using React. While this could have been written in markdown (and would have been much easier to maintain), I wanted to provide samples as well as snippets and explanations. All of the concepts discussed have samples in the source code or links to external examples. You can read all about the tips, tricks, concepts, etc. at the demo link.
 
 ## Demo
 Coming Soon to gh-pages.
 
 ### Still under development - Items to complete
-1. [ ] Pure Components Example/Tips
+1. [x] Pure Components Example/Tips
 2. [x] Prerender Example
-3. [ ] Immutable.js Link/Tips
-4. [ ] Alt.js Tips
-5. [ ] Dispatcher Example/Tips
-6. [ ] Actions Example/Tips
-7. [ ] Stores Example/Tips
-8. [ ] Add build script for CI to generate code for gh-pages
-8. [ ] Circle CI to automate deployment to gh-pages
-9. [x] Add eslint
+3. [x] Immutable.js Link/Tips
+4. [ ] Add build script for CI to generate code for gh-pages
+5. [ ] Circle CI to automate deployment to gh-pages
+6. [x] Add eslint
 
 ### Purpose
-This was developed for a BlueRaster Brownbag/Training to demonstrate tips and tricks learned for other developers.
+This was developed for a BlueRaster Brownbag to demonstrate concepts and other things learned while using React.
 
 ### Getting Started
 
@@ -32,6 +28,7 @@ This was developed for a BlueRaster Brownbag/Training to demonstrate tips and tr
 3. [ES6/Babel](https://babeljs.io/docs/learn-es2015/)
 4. [Alt.js](http://alt.js.org/)
 5. [Redux](http://rackt.org/redux/)
+6. [Pete Hunt's React HowTo](https://github.com/petehunt/react-howto)
 
 #### Examples
 1. [Immutable Flux Todo](https://github.com/Robert-W/immutable-flux-todo)

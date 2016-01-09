@@ -1,5 +1,5 @@
 export const config = {
 
-  title: 'React/Flux tips & tricks'
+  title: 'React tips & tricks'
 
 };

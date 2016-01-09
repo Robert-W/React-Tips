@@ -6,8 +6,8 @@
   "scripts": {
     "start": "gulp build & npm run babel -- -w & gulp serve",
     "babel": "babel src --out-dir build",
-    "postinstall": "bower install",
-    "prerender": "node scripts/prerender"
+    "dist": "gulp dist; babel src --out-dir dist; node scripts/prerender",
+    "postinstall": "bower install"
   },
   "keywords": [
     "esri",
