@@ -9,7 +9,7 @@ Coming Soon to gh-pages.
 1. [x] Pure Components Example/Tips
 2. [x] Prerender Example
 3. [x] Immutable.js Link/Tips
-4. [ ] Circle CI to automate deployment to gh-pages
+4. [x] Circle CI to automate deployment to gh-pages
 5. [x] Add eslint
 
 ### Purpose
