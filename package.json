@@ -6,7 +6,7 @@
   "scripts": {
     "start": "gulp build & npm run babel -- -w & gulp serve",
     "babel": "babel src --out-dir build",
-    "dist": "gulp dist; babel src --out-dir dist; node scripts/prerender",
+    "dist": "gulp dist; babel src --out-dir ./; node scripts/prerender",
     "postinstall": "bower install"
   },
   "keywords": [

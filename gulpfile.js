@@ -21,19 +21,19 @@ var config = {
     src: 'src/**/*.jade',
     watch: ['src/**/*.jade', 'src/css/critical.styl'],
     dest: 'build',
-    dist: 'dist'
+    dist: './'
   },
   stylus: {
     src: ['src/css/app.styl', 'src/css/critical.styl'],
     watch: 'src/css/**/*.styl',
     dest: 'build/css/',
-    dist: 'dist/css/'
+    dist: 'css/'
   },
   copy: {
-    react: { src: 'build/vendor/react/react.min.js', dest: 'dist/vendor/react/'},
-    reactDOM: { src: 'build/vendor/react/react-dom.min.js', dest: 'dist/vendor/react/'},
-    prism: { src: 'build/vendor/prism/prism.js', dest: 'dist/vendor/prism/'},
-    prismCSS: { src: 'build/vendor/prism/themes/prism.css', dest: 'dist/vendor/prism/themes/'}
+    react: { src: 'build/vendor/react/react.min.js', dest: 'vendor/react/'},
+    reactDOM: { src: 'build/vendor/react/react-dom.min.js', dest: 'vendor/react/'},
+    prism: { src: 'build/vendor/prism/prism.js', dest: 'vendor/prism/'},
+    prismCSS: { src: 'build/vendor/prism/themes/prism.css', dest: 'vendor/prism/themes/'}
   }
 };
 

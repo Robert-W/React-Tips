@@ -1,0 +1,15 @@
+general:
+  branches:
+    ignore:
+      - gh-pages
+machine:
+  node:
+    version: 4.2.2
+deployment:
+  production:
+    branch: master
+    commands:
+      - git checkout gh-pages
+      - git merge master
+      - ./scripts/production.sh
+      - git push https://$GITHUB_TOKEN:x-oauth-basic@github.com/Robert-W/React-tips.git gh-pages
