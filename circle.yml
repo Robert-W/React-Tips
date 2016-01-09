@@ -8,6 +8,7 @@ machine:
 dependencies:
   pre:
     - npm install -g gulp
+    - npm install gulp-autoprefixer
 deployment:
   production:
     branch: master
