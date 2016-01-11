@@ -1,0 +1,74 @@
+<!DOCTYPE html><html><head><title>Tips and Tricks</title><meta name="viewport" id="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="author" content="Robert-W"><meta charset="utf-8"><style>html,
+body,
+#root,
+.app {
+  font-family: Roboto;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+code {
+  font-family: monospace !important;
+  font-size: 16px !important;
+}
+.app-header {
+  background: #0cc;
+  height: 60px;
+  align-items: center;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.app-header__title {
+  padding: 0 10px;
+  color: #fff;
+}
+.app-body {
+  flex-direction: column;
+  display: flex;
+  padding-bottom: 20px;
+  position: absolute;
+  top: 60px;
+  overflow-y: auto;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+.inner-width {
+  margin: 10px auto;
+  width: 960px;
+  flex-shrink: 0;
+}
+.section__title {
+  font-weight: bold;
+  text-align: left;
+  font-size: 1.5em;
+  width: 100%;
+}
+.section__content {
+  margin: 20px;
+}
+</style><link rel="stylesheet" href="css/app.css"><link rel="stylesheet" href="vendor/prism/themes/prism.css"><script>var base = location.href.replace(/\/[^/]+$/, '');
+var dojoConfig = {
+  parseOnLoad: false,
+  async: true,
+  cacheBust: '0.1.0',
+  packages: [
+    { name: 'js', location: base + '/js' },
+    { name: 'vendor', location: base + '/vendor' },
+    { name: 'utils', location: base + '/js/utils' },
+    { name: 'stores', location: base + '/js/stores' },
+    { name: 'actions', location: base + '/js/actions' },
+    { name: 'components', location: base + '/js/components' }
+  ],
+  aliases: [
+    ['react', 'vendor/react/react.min'],
+    ['react-dom', 'vendor/react/react-dom.min']
+  ],
+  deps: ['dojo/domReady!'],
+  callback: function () {require(['js/main']);}
+};</script></head><body><div id="root"></div><script src="vendor/prism/prism.js"></script><script src="http://js.arcgis.com/3.15/init.js" async></script></body></html>
