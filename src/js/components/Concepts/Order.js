@@ -17,10 +17,10 @@ const Order = () => {
           Lifecycle methods
         </li>
         <li className='method-order__list-item'>
-          <code className='language-javascript'>render</code>
+          Your own functions and click handlers and/or event handlers
         </li>
         <li className='method-order__list-item'>
-          Your own functions and click handlers and/or event handlers
+          <code className='language-javascript'>render</code>
         </li>
       </ol>
       <div className='order-example'>
@@ -33,10 +33,10 @@ export default class Component extends React.Component {
   componentDidMount () { ... }
   componentDidUpdate () { ... }
   shouldComponentUpdate () { ... }
-  render () { ... }
   onClick () { ... }
   onChange () { ... }
   addLayer () { ... }
+  render () { ... }
 }
           `}
         </code></pre>
