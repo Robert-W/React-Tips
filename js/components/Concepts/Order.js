@@ -33,17 +33,17 @@ define(['exports', 'react'], function (exports, _react) {
       className: 'method-order__list-item'
     }, 'Lifecycle methods'), _react2.default.createElement('li', {
       className: 'method-order__list-item'
+    }, 'Your own functions and click handlers and/or event handlers'), _react2.default.createElement('li', {
+      className: 'method-order__list-item'
     }, _react2.default.createElement('code', {
       className: 'language-javascript'
-    }, 'render')), _react2.default.createElement('li', {
-      className: 'method-order__list-item'
-    }, 'Your own functions and click handlers and/or event handlers')), _react2.default.createElement('div', {
+    }, 'render'))), _react2.default.createElement('div', {
       className: 'order-example'
     }, _react2.default.createElement('div', {
       className: 'order-example__label'
     }), _react2.default.createElement('pre', {
       className: 'language-javascript'
-    }, _react2.default.createElement('code', null, 'export default class Component extends React.Component {\n  static displayName = \'\'\n  static propTypes = { ... }\n  constructor () { ... }\n  componentDidMount () { ... }\n  componentDidUpdate () { ... }\n  shouldComponentUpdate () { ... }\n  render () { ... }\n  onClick () { ... }\n  onChange () { ... }\n  addLayer () { ... }\n}\n          '))));
+    }, _react2.default.createElement('code', null, 'export default class Component extends React.Component {\n  static displayName = \'\'\n  static propTypes = { ... }\n  constructor () { ... }\n  componentDidMount () { ... }\n  componentDidUpdate () { ... }\n  shouldComponentUpdate () { ... }\n  onClick () { ... }\n  onChange () { ... }\n  addLayer () { ... }\n  render () { ... }\n}\n          '))));
   };
 
   exports.default = Order;

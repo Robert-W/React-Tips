@@ -91,5 +91,4 @@ define(['exports', 'components/Header', 'components/Body', 'js/config', 'react']
   }(_react2.default.Component);
 
   exports.default = App;
-  ;
 });

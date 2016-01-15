@@ -68,20 +68,44 @@ define(['exports', 'react'], function (exports, _react) {
   var Bindings = function (_React$Component) {
     _inherits(Bindings, _React$Component);
 
-    function Bindings(props) {
+    function Bindings() {
+      var _Object$getPrototypeO;
+
+      var _temp, _this, _ret;
+
       _classCallCheck(this, Bindings);
 
-      var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Bindings).call(this, props));
+      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
 
-      _this.goodBind = _this.goodBind.bind(_this);
-      _this.goodBindAttrs = _this.goodBindAttrs.bind(_this);
-      _this.renderOdds = _this.renderOdds.bind(_this);
-      _this.renderEvens = _this.renderEvens.bind(_this);
-      _this.renderItem = _this.renderItem.bind(_this);
-      return _this;
+      return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_Object$getPrototypeO = Object.getPrototypeOf(Bindings)).call.apply(_Object$getPrototypeO, [this].concat(args))), _this), _this.goodBind = function () {
+        alert('this is ' + _this);
+      }, _this.goodBindAttrs = function (evt) {
+        alert('this is ' + _this + ' and data-value = ' + evt.target.getAttribute('data-value'));
+      }, _this.renderOdds = function (item) {
+        if (item % 2 === 0) {
+          return null;
+        }
+
+        return _this.renderItem(item);
+      }, _this.renderEvens = function (item) {
+        if (item % 2 !== 0) {
+          return null;
+        }
+
+        return _this.renderItem(item);
+      }, _this.renderItem = function (item) {
+        return _react2.default.createElement('span', null, item);
+      }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
     _createClass(Bindings, [{
+      key: 'badBind',
+      value: function badBind() {
+        alert('this is bound in the render function');
+      }
+    }, {
       key: 'render',
       value: function render() {
         return _react2.default.createElement('div', {
@@ -92,7 +116,7 @@ define(['exports', 'react'], function (exports, _react) {
           className: 'language-javascript'
         }, _react2.default.createElement('code', null, 'export default class Button extends React.Component {\n  render () {\n    return <button onClick={this.clicked.bind(this)}></button>;\n  }\n  clicked () {\n    console.log(\'this is bound\', this);\n  }\n}        ')), _react2.default.createElement('p', null, 'And here is a ', _react2.default.createElement('strong', null, 'good'), ' example, with binding being done in the constructor.'), _react2.default.createElement('pre', {
           className: 'language-javascript'
-        }, _react2.default.createElement('code', null, 'export default class Button extends React.Component {\n  constructor (props) {\n    super(props);\n    this.clicked = this.clicked.bind(this);\n  }\n  render () {\n    return <button onClick={this.clicked}></button>;\n  }\n  clicked () {\n    console.log(\'this is bound\', this);\n  }\n}        ')), _react2.default.createElement('div', {
+        }, _react2.default.createElement('code', null, 'export default class Button extends React.Component {\n  clicked = () => {\n    console.log(\'this is bound\', this);\n  };\n  render () {\n    return <button onClick={this.clicked}></button>;\n  }\n}        ')), _react2.default.createElement('div', {
           className: 'bindings__example'
         }, _react2.default.createElement('button', {
           onClick: this.badBind.bind(this)
@@ -104,44 +128,6 @@ define(['exports', 'react'], function (exports, _react) {
         }, 'Good, No Arguments, has attributes')), _react2.default.createElement('div', {
           className: 'bindings__conditional-map'
         }, _react2.default.createElement('p', null, 'View source code to see an alternative method to passing parameters into a function inside [].map()'), _react2.default.createElement('div', null, _react2.default.createElement('h5', null, 'Evens'), list.map(this.renderEvens)), _react2.default.createElement('div', null, _react2.default.createElement('h5', null, 'Odds'), list.map(this.renderOdds))));
-      }
-    }, {
-      key: 'badBind',
-      value: function badBind() {
-        alert('this is bound in the render function');
-      }
-    }, {
-      key: 'goodBind',
-      value: function goodBind() {
-        alert('this is ' + this);
-      }
-    }, {
-      key: 'goodBindAttrs',
-      value: function goodBindAttrs(evt) {
-        alert('this is ' + this + ' and data-value = ' + evt.target.getAttribute('data-value'));
-      }
-    }, {
-      key: 'renderOdds',
-      value: function renderOdds(item) {
-        if (item % 2 === 0) {
-          return null;
-        }
-
-        return this.renderItem(item);
-      }
-    }, {
-      key: 'renderEvens',
-      value: function renderEvens(item) {
-        if (item % 2 !== 0) {
-          return null;
-        }
-
-        return this.renderItem(item);
-      }
-    }, {
-      key: 'renderItem',
-      value: function renderItem(item) {
-        return _react2.default.createElement('span', null, item);
       }
     }]);
 
