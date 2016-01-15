@@ -5,6 +5,9 @@ general:
 machine:
   node:
     version: 4.2.2
+dependencies:
+  pre:
+    - npm install -g gulp
 deployment:
   production:
     branch: master

@@ -3,14 +3,7 @@
 This example app attempts to demonstrate and explain concepts, tips, preferred styles, and lessons learned from using React. While this could have been written in markdown (and would have been much easier to maintain), I wanted to provide samples as well as snippets and explanations. All of the concepts discussed have samples in the source code or links to external examples. You can read all about the tips, tricks, concepts, etc. at the demo link.
 
 ## Demo
-Coming Soon to gh-pages.
-
-### Still under development - Items to complete
-1. [x] Pure Components Example/Tips
-2. [x] Prerender Example
-3. [x] Immutable.js Link/Tips
-4. [ ] Circle CI to automate deployment to gh-pages
-5. [x] Add eslint
+[http://robert-w.github.io/React-tips/](http://robert-w.github.io/React-tips/)
 
 ### Purpose
 This was developed for a BlueRaster Brownbag to demonstrate concepts and other things learned while using React.

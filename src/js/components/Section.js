@@ -15,7 +15,7 @@ export default class Section extends React.Component {
           {this.props.children}
         </div>
       </section>
-    )
+    );
   }
 
 }

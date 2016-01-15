@@ -4,17 +4,34 @@ let list = [1, 2, 3, 4, 5];
 
 export default class Bindings extends React.Component {
 
-  constructor (props) {
-    super(props);
-
-    this.goodBind = this.goodBind.bind(this);
-    this.goodBindAttrs = this.goodBindAttrs.bind(this);
-    //- Functions for maps, only do this if the map function
-    //- needs access to this, otherwise, you don't need to bind
-    this.renderOdds = this.renderOdds.bind(this);
-    this.renderEvens = this.renderEvens.bind(this);
-    this.renderItem = this.renderItem.bind(this);
+  badBind () {
+    alert('this is bound in the render function');
   }
+
+  goodBind = () => {
+    alert(`this is ${this}`);
+  };
+
+  goodBindAttrs = (evt) => {
+    alert(`this is ${this} and data-value = ${evt.target.getAttribute('data-value')}`);
+  };
+
+  //- Map Functions
+  renderOdds = (item) => {
+    //- return null for evens
+    if (item % 2 === 0) { return null; }
+    return this.renderItem(item);
+  };
+
+  renderEvens = (item) => {
+    //- return null for odds
+    if (item % 2 !== 0) { return null; }
+    return this.renderItem(item);
+  };
+
+  renderItem = (item) => {
+    return <span>{item}</span>;
+  };
 
   render () {
     return (
@@ -40,15 +57,11 @@ export default class Button extends React.Component {
         </p>
         <pre className='language-javascript'><code>{`\
 export default class Button extends React.Component {
-  constructor (props) {
-    super(props);
-    this.clicked = this.clicked.bind(this);
-  }
+  clicked = () => {
+    console.log('this is bound', this);
+  };
   render () {
     return <button onClick={this.clicked}></button>;
-  }
-  clicked () {
-    console.log('this is bound', this);
   }
 }\
         `}</code></pre>
@@ -70,35 +83,6 @@ export default class Button extends React.Component {
         </div>
       </div>
     );
-  }
-
-  badBind () {
-    alert('this is bound in the render function');
-  }
-
-  goodBind () {
-    alert(`this is ${this}`);
-  }
-
-  goodBindAttrs (evt) {
-    alert(`this is ${this} and data-value = ${evt.target.getAttribute('data-value')}`);
-  }
-
-  //- Map Functions
-  renderOdds (item) {
-    //- return null for evens
-    if (item % 2 === 0) { return null; }
-    return this.renderItem(item);
-  }
-
-  renderEvens (item) {
-    //- return null for odds
-    if (item % 2 !== 0) { return null; }
-    return this.renderItem(item);
-  }
-
-  renderItem (item) {
-    return <span>{item}</span>;
   }
 
 }
