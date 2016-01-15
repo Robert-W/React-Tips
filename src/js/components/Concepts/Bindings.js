@@ -53,7 +53,7 @@ export default class Button extends React.Component {
 }\
         `}</code></pre>
         <p>
-          And here is a <strong>good</strong> example, with binding being done in the constructor.
+          And here is a <strong>good</strong> example, with the bound function defined as a class property
         </p>
         <pre className='language-javascript'><code>{`\
 export default class Button extends React.Component {
